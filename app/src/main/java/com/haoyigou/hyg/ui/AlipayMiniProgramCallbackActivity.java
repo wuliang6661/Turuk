@@ -120,6 +120,7 @@ public class AlipayMiniProgramCallbackActivity extends BaseActivity {
             }
             MApplication.ordernum = "";
             finish();
+
         }
     }
 }
