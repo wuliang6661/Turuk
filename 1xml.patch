@@ -1,0 +1,402 @@
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/PlatformPageAdapter.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/PlatformPageAdapter.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/PlatformPageAdapter.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import java.util.ArrayList;
+ 
+@@ -24,7 +24,7 @@
+ import cn.sharesdk.framework.Platform;
+ 
+ 
+-import com.haoyigou.hyg.onekeyshare.CustomerLogo;
++import com.haoyigou.hyg.view.onekeyshare.CustomerLogo;
+ import com.mob.tools.gui.ViewPagerAdapter;
+ import com.mob.tools.utils.R;
+ 
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/port/PlatformPagePort.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/port/PlatformPagePort.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/port/PlatformPagePort.java	(revision )
+@@ -6,11 +6,11 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic.port;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic.port;
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.PlatformPage;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.PlatformPageAdapter;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.PlatformPage;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.PlatformPageAdapter;
+ 
+ import java.util.ArrayList;
+ 
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/ClassicTheme.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/ClassicTheme.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/ClassicTheme.java	(revision )
+@@ -6,16 +6,16 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import android.content.Context;
+ import android.content.res.Configuration;
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.land.EditPageLand;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.land.PlatformPageLand;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.port.EditPagePort;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.port.PlatformPagePort;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.land.EditPageLand;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.land.PlatformPageLand;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.port.EditPagePort;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.port.PlatformPagePort;
+ import cn.sharesdk.framework.Platform;
+ import cn.sharesdk.framework.Platform.ShareParams;
+ 
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/EditPage.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/EditPage.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/EditPage.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import java.util.ArrayList;
+ import java.util.HashMap;
+@@ -32,10 +32,10 @@
+ import cn.sharesdk.framework.Platform.ShareParams;
+ import cn.sharesdk.framework.ShareSDK;
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeySharePage;
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.land.FriendListPageLand;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.port.FriendListPagePort;
++import com.haoyigou.hyg.view.onekeyshare.OnekeySharePage;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.land.FriendListPageLand;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.port.FriendListPagePort;
+ import com.mob.tools.gui.AsyncImageView;
+ import com.mob.tools.utils.DeviceHelper;
+ import com.mob.tools.utils.R;
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/FriendListPage.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/FriendListPage.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/FriendListPage.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import java.util.ArrayList;
+ import java.util.HashMap;
+@@ -26,8 +26,8 @@
+ import cn.sharesdk.framework.Platform;
+ 
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeySharePage;
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.OnekeySharePage;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
+ import com.mob.tools.gui.PullToRequestView;
+ import com.mob.tools.utils.R;
+ 
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/IndicatorView.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/IndicatorView.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/IndicatorView.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import android.content.Context;
+ import android.graphics.Canvas;
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/PicViewerPage.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/PicViewerPage.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/PicViewerPage.java	(revision )
+@@ -6,15 +6,15 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import android.graphics.Bitmap;
+ import android.graphics.drawable.ColorDrawable;
+ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+ import android.widget.ImageView.ScaleType;
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeySharePage;
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.OnekeySharePage;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
+ import com.mob.tools.gui.ScaledImageView;
+ 
+ /** 图片浏览的视图类 */
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/port/FriendListPagePort.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/port/FriendListPagePort.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/port/FriendListPagePort.java	(revision )
+@@ -6,10 +6,10 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic.port;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic.port;
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.FriendListPage;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.FriendListPage;
+ import com.mob.tools.utils.R;
+ 
+ 
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/FriendListItem.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/FriendListItem.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/FriendListItem.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import android.content.Context;
+ import android.graphics.Bitmap;
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/land/FriendListPageLand.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/land/FriendListPageLand.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/land/FriendListPageLand.java	(revision )
+@@ -6,10 +6,10 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic.land;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic.land;
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.FriendListPage;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.FriendListPage;
+ import com.mob.tools.utils.R;
+ 
+ /** 横屏的好友列表 */
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/port/PlatformPageAdapterPort.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/port/PlatformPageAdapterPort.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/port/PlatformPageAdapterPort.java	(revision )
+@@ -6,15 +6,15 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic.port;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic.port;
+ 
+ import java.util.ArrayList;
+ 
+ import android.content.Context;
+ 
+ 
+-import com.haoyigou.hyg.onekeyshare.themes.classic.PlatformPage;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.PlatformPageAdapter;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.PlatformPage;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.PlatformPageAdapter;
+ import com.mob.tools.utils.R;
+ 
+ /** 竖屏的九宫格页面适配器 */
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/XView.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/XView.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/XView.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import android.content.Context;
+ import android.graphics.Canvas;
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/PRTHeader.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/PRTHeader.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/PRTHeader.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import static com.mob.tools.utils.R.getStringRes;
+ import android.content.Context;
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/PlatformPage.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/PlatformPage.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/PlatformPage.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import java.util.ArrayList;
+ import java.util.HashMap;
+@@ -24,9 +24,9 @@
+ import cn.sharesdk.framework.Platform.ShareParams;
+ import cn.sharesdk.framework.ShareSDK;
+ 
+-import com.haoyigou.hyg.onekeyshare.CustomerLogo;
+-import com.haoyigou.hyg.onekeyshare.OnekeySharePage;
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.CustomerLogo;
++import com.haoyigou.hyg.view.onekeyshare.OnekeySharePage;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
+ import com.mob.tools.gui.MobViewPager;
+ import com.mob.tools.utils.R;
+ 
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/FriendAdapter.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/FriendAdapter.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/FriendAdapter.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import java.util.ArrayList;
+ import java.util.HashMap;
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/land/PlatformPageLand.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/land/PlatformPageLand.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/land/PlatformPageLand.java	(revision )
+@@ -6,11 +6,11 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic.land;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic.land;
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.PlatformPage;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.PlatformPageAdapter;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.PlatformPage;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.PlatformPageAdapter;
+ 
+ import java.util.ArrayList;
+ 
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/RotateImageView.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/RotateImageView.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/RotateImageView.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic;
+ 
+ import android.content.Context;
+ import android.graphics.Canvas;
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/port/EditPagePort.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/port/EditPagePort.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/port/EditPagePort.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic.port;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic.port;
+ 
+ import java.io.File;
+ 
+@@ -22,9 +22,9 @@
+ import android.widget.ScrollView;
+ import android.widget.TextView;
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.EditPage;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.XView;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.EditPage;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.XView;
+ import com.mob.tools.gui.AsyncImageView;
+ import com.mob.tools.utils.BitmapHelper;
+ import com.mob.tools.utils.R;
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/land/EditPageLand.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/land/EditPageLand.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/land/EditPageLand.java	(revision )
+@@ -6,7 +6,7 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic.land;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic.land;
+ 
+ import java.io.File;
+ 
+@@ -25,9 +25,9 @@
+ import android.widget.TextView;
+ 
+ 
+-import com.haoyigou.hyg.onekeyshare.OnekeyShareThemeImpl;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.EditPage;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.XView;
++import com.haoyigou.hyg.view.onekeyshare.OnekeyShareThemeImpl;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.EditPage;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.XView;
+ import com.mob.tools.gui.AsyncImageView;
+ import com.mob.tools.utils.BitmapHelper;
+ import com.mob.tools.utils.R;
+Index: app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/land/PlatformPageAdapterLand.java
+===================================================================
+--- app/src/main/java/com/haoyigou/hyg/onekeyshare/themes/classic/land/PlatformPageAdapterLand.java	(revision 134)
++++ app/src/main/java/com/haoyigou/hyg/view/onekeyshare/themes/classic/land/PlatformPageAdapterLand.java	(revision )
+@@ -6,15 +6,15 @@
+  * Copyright (c) 2013年 mob.com. All rights reserved.
+  */
+ 
+-package com.haoyigou.hyg.onekeyshare.themes.classic.land;
++package com.haoyigou.hyg.view.onekeyshare.themes.classic.land;
+ 
+ import java.util.ArrayList;
+ 
+ import android.content.Context;
+ 
+ 
+-import com.haoyigou.hyg.onekeyshare.themes.classic.PlatformPage;
+-import com.haoyigou.hyg.onekeyshare.themes.classic.PlatformPageAdapter;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.PlatformPage;
++import com.haoyigou.hyg.view.onekeyshare.themes.classic.PlatformPageAdapter;
+ import com.mob.tools.utils.R;
+ 
+ /** 横屏的九宫格页面适配器 */

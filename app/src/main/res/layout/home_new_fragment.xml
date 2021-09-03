@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/title_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/first_logo" />
+
+            <ImageView
+                android:id="@+id/scan_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/first_scan" />
+
+
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/search_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/coner_edit_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="35dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#626262"
+                    android:textSize="12dp" />
+
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/first_search" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/message_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/first_message" />
+
+
+            <ImageView
+                android:id="@+id/share_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/first_share" />
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/classify_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scrollbars="none" />
+
+
+        <com.haoyigou.hyg.view.widget.PullDownScrollView
+            android:id="@+id/refresh_root"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+
+            <com.haoyigou.hyg.view.widget.TopAndButtomListView
+                android:id="@+id/shop_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"/>
+
+
+        </com.haoyigou.hyg.view.widget.PullDownScrollView>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/topButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/top"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/shop_num_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/home_suspen_button"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/num_sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="100"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

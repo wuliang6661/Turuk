@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:id="@+id/rlMain">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlRoom">
+
+        <tcking.github.com.giraffeplayer.IjkVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <!--缩放按钮-->
+        <ImageView
+            android:id="@+id/iv_zoom_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="20dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/nn_paster_btn_scale"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/iv_close_window"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/nn_paster_btn_close"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

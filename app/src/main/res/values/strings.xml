@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name" translatable="false">好易购</string>
+    <string name="exit_app" translatable="false">再按一次退出</string>
+    <string name="no_network_connection_toast" translatable="false">网络无连接</string>
+
+    <string name="behavior_weibo_header" translatable="false">com.haoyigou.hyg.behavior.WeiboHeaderPagerBehavior</string>
+    <string name="behavior_weibo_content" translatable="false">com.haoyigou.hyg.behavior.WeiboContentBehavior</string>
+
+    <string name="title_float_window_dialog" translatable="false">WM弹窗(无需权限)</string>
+    <string name="title_alert_window" translatable="false">系统弹窗(需权限)</string>
+
+    <string name="app_drag_delete" translatable="false">拖动到此处删除</string>
+    <string name="app_let_go_drag_delete" translatable="false">松手即可删除</string>
+    <string name="app_wechat_send" translatable="false">发送</string>
+    <string name="app_wechat_send_num" translatable="false">发送(%1$d/%2$d)</string>
+
+
+    <string name="info" translatable="false">\u3000\u3000 我们非常重视您的隐私和个人信息保护，积极响应正式号召，维护互联网个人信息安全，我们特别提示您在使用好易购服务前，阅读隐私协议，以了解我们在收集和使用您相关个人信息时的处理规则。\n\u3000\u3000请您仔细阅读：</string>
+
+    <string name="info2" translatable="false">\n\u3000\u3000《好易购用户协议》与《隐私声明》，我们将严格保护您的个人信息，为您提供更好的服务。</string>
+</resources>

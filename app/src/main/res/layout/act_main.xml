@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:class="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    tools:context="com.haoyigou.hyg.ui.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        class="com.haoyigou.hyg.ui.MainActivity"
+        android:background="#ffffff"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_light" />
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/color_white"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/home_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/shop_normal" />
+
+                <ImageView
+                    android:id="@+id/home_pre"
+                    android:layout_width="23dp"
+                    android:layout_height="25dp"
+                    android:background="@mipmap/home_select"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/home_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="首页"
+                    android:textColor="@color/footer_text_color_normal"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/classify_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/classify_image"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/final_fenlei_normal" />
+
+                    <ImageView
+                        android:id="@+id/classify_pre"
+                        android:layout_width="23dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/tuan_select"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/classify_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="拼团"
+                        android:textColor="@color/footer_text_color_normal"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/live_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/live_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/sq_not_select" />
+
+                <ImageView
+                    android:id="@+id/live_pre"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:src="@mipmap/c_select"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/live_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="社区"
+                    android:textColor="@color/footer_text_color_normal"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/shopcar_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/shopcar_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/finaly_cart_normal" />
+
+                <ImageView
+                    android:id="@+id/shopcar_pre"
+                    android:layout_width="23dp"
+                    android:layout_height="25dp"
+                    android:background="@mipmap/shop_car_select"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/shopcar_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="购物车"
+                    android:textColor="@color/footer_text_color_normal"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/login_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/login_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/person_result1" />
+
+                <ImageView
+                    android:id="@+id/login_pre"
+                    android:layout_width="23dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/mine_select"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/login_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="我的"
+                    android:textColor="@color/footer_text_color_normal"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/person_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/person_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/person_result1" />
+
+                <ImageView
+                    android:id="@+id/person_pre"
+                    android:layout_width="23dp"
+                    android:layout_height="25dp"
+                    android:background="@mipmap/mine_select"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/person_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="我的"
+                    android:textColor="@color/footer_text_color_normal"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTeamActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="127dp"
+            android:background="@drawable/team_activity_bg"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/txtTeamActivity"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="9sp"
+                android:text="爆品团团"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

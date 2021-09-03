@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/voucher_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical">
+    <include layout="@layout/header_layout" />
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            >
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                app:canLoop="true" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:background="#ffffff">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/butto_huafei"
+                    android:layout_toLeftOf="@+id/person_book"
+                    >
+                    <EditText
+                        android:id="@+id/phone_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入手机号码"
+                        android:paddingLeft="15dp"
+                        android:phoneNumber="true"
+                        android:maxLength="11"
+                        android:textColor="#2C2C2C"
+                        android:layout_weight ="1"
+                        android:textSize="23dp" />
+                    <TextView
+                        android:id="@+id/phone_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/person_book"
+                        android:text="(湖北联通)"
+                        android:textColor="#8e8e8e"
+                        android:textSize="12dp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+                <ImageView
+
+                    android:id="@+id/person_book"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/person_book" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+
+                android:background="#ffffff" />
+            <LinearLayout
+                android:background="#ffffff"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/voucher_changes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/changes_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="充话费"
+                        android:textColor="@color/mainBlue"
+                        android:textSize="15dp" />
+                    <ImageView
+                        android:id="@+id/changes_img"
+                        android:layout_width="11dp"
+                        android:layout_height="7dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="@mipmap/blue_down" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginTop="13dp"
+                    android:background="#e3e3e3" />
+
+
+                <LinearLayout
+                    android:id="@+id/voucher_flow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/flow_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="充流量"
+                        android:textColor="#2b2b2b"
+                        android:textSize="15dp" />
+
+
+                    <ImageView
+                        android:id="@+id/flow_img"
+                        android:layout_width="11dp"
+                        android:layout_height="7dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/down_arrow"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager"
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    >
+
+                </androidx.viewpager.widget.ViewPager>
+
+                <RelativeLayout
+                    android:layout_marginTop="14dp"
+                    android:visibility="gone"
+                    android:id="@+id/shengneixianshi"
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                    <LinearLayout
+                        android:id="@+id/aa"
+                        android:layout_marginLeft="11dp"
+                        android:layout_width="60dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="11dp"
+                        android:background="@drawable/item_voucher_nocheck"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/shengneijiagete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥10.00元"
+                            android:textColor="#2b2b2b"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/bb"
+                        android:layout_marginLeft="18dp"
+                        android:layout_toRightOf="@+id/aa"
+                        android:layout_width="34dp"
+                        android:layout_height="17dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/item_voucher_checkd"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="省内"
+                            android:textColor="#e72e2d"
+                            android:textSize="11dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/shengneiliuliang"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@+id/bb"
+                        android:layout_marginLeft="18dp"
+                        android:text="省内流量，当月可用"
+                        android:layout_toRightOf="@+id/aa"
+                        android:textColor="#2b2b2b"
+                        android:textSize="11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#F4F4F4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/payActivity"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textColor="#E72E2D"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:drawableStart="@mipmap/new_hui"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/quanguoxianshi"
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                    <LinearLayout
+                        android:background="@drawable/item_voucher_nocheck"
+                        android:id="@+id/aaa"
+                        android:layout_marginLeft="11dp"
+                        android:layout_width="60dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="11dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+
+                            android:id="@+id/quanguojigete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥10.00元"
+                            android:textColor="#2b2b2b"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/bbb"
+                        android:layout_marginLeft="18dp"
+                        android:layout_toRightOf="@+id/aaa"
+                        android:layout_width="34dp"
+                        android:layout_height="17dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/item_voucher_checkd"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="全国"
+                            android:textColor="#e72e2d"
+                            android:textSize="11dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/quanguoliuliang"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@+id/bbb"
+                        android:layout_marginLeft="18dp"
+                        android:text="全国流量，当月可用"
+                        android:layout_toRightOf="@+id/aaa"
+                        android:textColor="#2b2b2b"
+                        android:textSize="11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/phone_coupon"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:text="优惠劵"
+            android:textColor="#2b2b2b"
+            android:textSize="14dp"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/coupon"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:textSize="13dp"
+            android:layout_marginRight="23dp"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/arrow"
+            android:layout_width="11dp"
+            android:layout_height="12dp" />
+
+    </LinearLayout>
+    <LinearLayout
+android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        >
+        <TextView
+            android:background="#ffffff"
+            android:id="@+id/voucher_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="售价：￥ 0.0"
+            android:textColor="#e72e2d"
+            android:textSize="16dp" />
+        <TextView
+            android:background="@drawable/change_color"
+            android:id="@+id/voucher_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="#ffffff"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="去充值"
+
+            android:textSize="16dp" />
+
+    </LinearLayout>
+</LinearLayout>

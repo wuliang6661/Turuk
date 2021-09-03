@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorline"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/applive_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/activity_applive_button"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:text="APP直播"
+                android:textSize="16dp"
+                android:textColor="@color/live_slider" />
+            <ImageView
+                android:id="@+id/app_slider"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="78dp"
+                android:layout_height="1dp"
+                android:background="@color/live_slider"
+                android:visibility="visible"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="1dp"
+            android:layout_height="19dp"
+            android:background="@color/live_center" />
+        <LinearLayout
+            android:id="@+id/tvlistbutton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/activity_tvlive_button"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:text="电视直播"
+                android:textSize="16dp"
+                android:textColor="@color/live_text" />
+            <ImageView
+                android:id="@+id/tv_slider"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="78dp"
+                android:layout_height="1dp"
+                android:background="@color/live_slider"
+                android:visibility="gone"
+
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <com.haoyigou.hyg.ui.JocellWebView
+        android:id="@+id/app_live_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_marginTop="1dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="220px">
+        <ImageView
+            android:id="@+id/follow_ac_image"
+            android:background="#2197f2"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginBottom="20px"
+            android:layout_width="328px"
+            android:layout_height="180px" />
+        <TextView
+            android:layout_marginTop="60px"
+            android:layout_marginRight="24px"
+            android:layout_toRightOf="@+id/follow_ac_image"
+            android:text="阿里巴巴线下购物"
+            android:maxLines="1"
+            android:textColor="#333333"
+            android:textSize="27px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/follow_ac_number"
+            android:layout_marginTop="134px"
+            android:layout_toRightOf="@+id/follow_ac_image"
+            android:text="1.7万观看"
+            android:textColor="#525252"
+            android:textSize="23px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginRight="24px"
+            android:layout_marginTop="134px"
+            android:layout_alignParentRight="true"
+            android:text="25个宝贝推荐"
+            android:textColor="#525252"
+            android:textSize="23px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

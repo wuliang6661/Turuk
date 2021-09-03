@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/live_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.yunfan.player.widget.YfPlayerKit
+            android:id="@+id/surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/G" />
+
+
+        <RelativeLayout
+            android:id="@+id/buttom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#50000000">
+
+            <ImageView
+                android:id="@+id/voice_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/voice" />
+
+            <ImageView
+                android:id="@+id/live_all"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/all" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

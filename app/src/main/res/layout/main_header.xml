@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:background="@color/title_bg">
+
+
+    <LinearLayout
+        android:id="@+id/head_layout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/touming_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.haoyigou.hyg.view.circlephoto.RoundImageView
+            android:id="@+id/head_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/headpic" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="45dp"
+        android:layout_toRightOf="@id/head_layout"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/head_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="年轻的疯"
+            android:textColor="@color/colorline"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="奖励：￥"
+                android:textColor="@color/colorline" />
+
+            <TextView
+                android:id="@+id/head_user_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/colorline" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/head_setting"
+        android:layout_width="47dp"
+        android:layout_height="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/setting_background"
+        android:text="设置"
+        android:textColor="@color/colorline"
+        android:textSize="10dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.haoyigou.hyg.ui.RoundImageView3
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/pic"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginStart="15dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginStart="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:textColor="#000000"
+                android:text=""
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:minLines="2"
+                android:ellipsize="end"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/groupType"
+                    android:background="@drawable/group_item_bg"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="#E54C3C"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/groupSuccessTxt"
+                    android:textColor="#969696"
+                    android:textSize="12sp"
+                    android:text=""
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_width="58dp"
+                    android:layout_height="21dp"
+                    android:id="@+id/goToGroup"
+                    android:src="@mipmap/goto_group_btn"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="24dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/layout">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="拼团价"
+                        android:textSize="12sp"
+                        android:textColor="#E54C3C"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥"
+                        android:textSize="12sp"
+                        android:textColor="#D13A2B"
+                        android:layout_marginStart="3dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/price"
+                        android:textColor="#D13A2B"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:text="0"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/singlePrice"
+                    android:text="单买价￥0"
+                    android:textSize="12sp"
+                    android:textColor="#969696"
+                    android:layout_below="@id/layout"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bgLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F6F5F5"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

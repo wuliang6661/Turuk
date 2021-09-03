@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#f4f4f4"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorline"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/applive_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/activity_applive_button"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:text="APP直播"
+                android:textSize="16dp"
+                android:textColor="@color/live_text" />
+            <ImageView
+                android:id="@+id/app_slider"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="78dp"
+                android:layout_height="1dp"
+                android:background="@color/live_slider"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="1dp"
+            android:layout_height="19dp"
+            android:background="@color/live_center" />
+        <LinearLayout
+            android:id="@+id/tvlistbutton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/activity_tvlive_button"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:text="电视直播"
+                android:textSize="16dp"
+                android:textColor="@color/live_slider" />
+            <ImageView
+                android:id="@+id/tv_slider"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="78dp"
+                android:layout_height="1dp"
+                android:background="@color/live_slider"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlRed"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#e72e2d"
+        android:visibility="gone"
+        android:layout_below="@id/live_video_layout">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="电视直播"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_tab"
+        android:layout_marginTop="10dp">
+
+
+        <ListView
+            android:id="@+id/shop_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="14dp"
+            android:divider="#f5f5f5" />
+
+        <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal"
+            android:background="#ffffff"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/hot_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableStart="@mipmap/hot"
+                android:drawablePadding="7dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:text="热销榜"
+                android:textColor="#170808"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/activity"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#868686"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:text=""/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/live_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/layout_tab">
+
+        <com.yunfan.player.widget.YfPlayerKit
+            android:id="@+id/surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/G" />
+
+
+        <RelativeLayout
+            android:id="@+id/buttom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#50000000">
+
+            <ImageView
+                android:id="@+id/voice_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/voice" />
+
+            <ImageView
+                android:id="@+id/live_all"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/all" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

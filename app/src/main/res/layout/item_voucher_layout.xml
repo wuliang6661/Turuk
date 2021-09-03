@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginBottom="10dp"
+        >
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/item_voucher_bg"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/item_voucher_nocheck"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10元"
+                android:textColor="#2b2b2b"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/change_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="售价：10.00"
+                android:textColor="#8e8e8e"
+                android:textSize="12dp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/image"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="right"
+            android:background="@drawable/youhuijiaobiao"
+            android:layout_width="28dp"
+            android:layout_height="27dp" />
+    </FrameLayout>
+
+
+
+</LinearLayout>

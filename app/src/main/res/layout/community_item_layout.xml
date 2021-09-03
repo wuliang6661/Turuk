@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.haoyigou.hyg.view.circlephoto.RoundImageView
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:id="@+id/header"
+            android:layout_marginStart="27dp"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textSize="15sp"
+                android:textColor="#202020"
+                android:text=""/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/time"
+                android:textColor="#696969"
+                android:textSize="11sp"
+                android:text=""/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="27dp"
+        android:id="@+id/topic"
+        android:text=""
+        android:textColor="#202020"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="27dp"
+        android:id="@+id/content"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:text=""
+        android:textColor="#202020"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+        <ImageView
+            android:id="@+id/downImage"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/down_image"
+            android:layout_marginEnd="27dp"/>
+
+    </LinearLayout>
+
+    <com.haoyigou.hyg.view.ninepic.NineGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/picGrid"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="25dp"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="196dp"
+        android:layout_height="258dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <cn.jzvd.JzvdStd
+            android:id="@+id/videoplayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/productLink"
+        android:textSize="12sp"
+        android:textColor="#B079BB"
+        android:drawableStart="@mipmap/link"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:id="@+id/seeNum"
+            android:textSize="13sp"
+            android:textColor="#A0A0A0"
+            android:paddingStart="27dp"
+            android:text=""/>
+
+        <LinearLayout
+            android:id="@+id/likeBtn"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|end">
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:id="@+id/likeImg"
+                android:src="@mipmap/like_no"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/like"
+                android:textSize="13sp"
+                android:textColor="#A0A0A0"
+                android:layout_marginStart="3dp"
+                android:text="0" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/commentBtn"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|end">
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:id="@+id/commentImg"
+                android:src="@mipmap/message"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/comment"
+                android:textSize="13sp"
+                android:layout_marginStart="3dp"
+                android:textColor="#A0A0A0"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/showComment"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center_vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/down_image"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#ffffff"/>
+</LinearLayout>

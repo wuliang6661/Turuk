@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    android:id="@+id/rlMain">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlRoom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include
+                layout="@layout/giraffe_player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+        <com.haoyigou.hyg.view.viewpager.ViewPagerSlide
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager"
+            android:background="#00000000"
+            android:visibility="gone">
+
+        </com.haoyigou.hyg.view.viewpager.ViewPagerSlide>
+
+        <!--缩放按钮-->
+        <ImageView
+            android:id="@+id/iv_zoom_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="20dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/nn_paster_btn_scale"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/iv_close_window"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/nn_paster_btn_close"
+            android:visibility="gone"/>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_root"
+            android:layout_width="220dp"
+            android:layout_height="230dp"
+            android:background="#00000000"
+            android:orientation="vertical"
+            android:focusableInTouchMode="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="90dp"
+            android:layout_marginStart="20dp"
+            android:visibility="visible">
+
+            <com.scwang.smartrefresh.layout.header.FalsifyHeader
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:id="@+id/talkList">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <com.scwang.smartrefresh.layout.footer.FalsifyFooter
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/aboveTextLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/talk_item_bg"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_above="@id/refresh_root"
+            android:animateLayoutChanges="true"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/aboveName"
+                android:textSize="13sp"
+                android:textColor="#FEE24A"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/aboveContent"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.kaisengao.likeview.like.KsgLikeView
+        android:id="@+id/live_view"
+        android:layout_width="100dp"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentEnd="true"
+        app:ksg_default_image="@mipmap/gift1"
+        app:ksg_enter_duration="3000"
+        app:ksg_curve_duration="3000"/>
+
+    <include
+        android:id="@+id/layoutView"
+        layout="@layout/layout_live"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"/>
+
+
+    <ImageView
+        android:id="@+id/sendGift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/send_gift"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="110dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

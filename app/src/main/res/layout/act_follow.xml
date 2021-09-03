@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#F4F4F4" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/header_layout" />
+    <RelativeLayout
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="228px">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/follow_ac_header"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginTop="56px"
+            android:layout_marginLeft="56px"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <TextView
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="75px"
+            android:layout_toRightOf="@+id/follow_ac_header"
+            android:textColor="#333333"
+            android:textSize="30px"
+            android:text="小易欢购"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="120px"
+            android:layout_toRightOf="@+id/follow_ac_header"
+            android:textColor="#333333"
+            android:textSize="25px"
+            android:text="66人关注"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:background="@drawable/follow_status"
+            android:text="已关注"
+            android:gravity="center"
+            android:layout_marginRight="56px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="100px"
+            android:layout_height="40px"/>
+    </RelativeLayout>
+
+    <View
+        android:background="#F4F4F4"
+        android:layout_width="match_parent"
+        android:layout_height="88px"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

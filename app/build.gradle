@@ -1,0 +1,188 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.haoyigou.hyg"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 85
+        versionName "6.5.1"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "arm64-v8a", "x86_64",'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.haoyigou.hyg",
+                JPUSH_APPKEY : "45fbedf7b982e92caa93eb84", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                XIAOMI_APPID:"2882303761517518517",
+                XIAOMI_APPKEY:"5121751810517",
+        ]
+
+    }
+
+    //签名
+    signingConfigs {
+        release {// 自己的签名文件
+            storeFile rootProject.file('haoyigou.jks')
+            storePassword "123456"
+            keyAlias "keystore"
+            keyPassword "123456"
+        }
+        debug {// 自己的签名文件
+            storeFile rootProject.file('haoyigou.jks')
+            storePassword "123456"
+            keyAlias "keystore"
+            keyPassword "123456"
+        }
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+
+    }
+
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        repositories {
+            jcenter()
+            flatDir {
+                dirs 'libs'
+            }
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-v4:25.4.0"
+
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:28.0.0'
+    }
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/UPPayAssistEx.jar')
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs/httpcore-4.4.3.jar')
+//    implementation files('libs/libammsdk.jar')
+    // compile files('libs/httpclient-android-4.3.5.jar')
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.github.androidprogresslayout:library:2.0.2@aar'
+    implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
+    implementation files('libs/httpcore-4.4.3.jar')
+    implementation files('libs/MobCommons-2016.0816.1507.jar')
+    implementation files('libs/android-viewbadger.jar')
+    implementation('androidx.appcompat:appcompat:1.1.0',
+            'com.google.android.material:material:1.0.0',
+            'androidx.recyclerview:recyclerview:1.0.0')
+    implementation 'com.alibaba:fastjson:1.2.39'
+    implementation 'com.squareup.okhttp:okhttp:2.7.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.baoyz.actionsheet:library:1.1.5'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+    implementation 'com.google.android.gms:play-services-appindexing:9.8.0'
+    implementation 'com.meiqia:meiqiasdk:3.4.7@aar'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'cat.ereza:customactivityoncrash:1.5.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+//    implementation 'com.shuyu:GSYVideoPlayer:2.0.8'
+    implementation 'cn.gavinliu.android.lib:ShapedImageView:0.8.4'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+    implementation 'com.jiechic.library:xUtils:2.6.14'
+    implementation 'com.google.android.gms:play-services-appindexing:8.4.0'
+    implementation 'com.zhy:base-rvadapter:3.0.3'
+    implementation 'com.zhy:base-adapter:3.0.3'
+    implementation 'com.zhy:autolayout:1.4.5'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation project(':srdlibrary')
+    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'com.bigkoo:alertview:1.0.3'
+    implementation 'gorden.refresh:refresh-java:1.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-21'
+    implementation project(path: ':lib-encrypt')
+    implementation files('libs/pldroid-player-2.1.9.jar')
+    api 'com.tencent.imsdk:imsdk:4.6.1'//腾讯IM
+    api 'cn.dreamtobe.kpswitch:library:1.6.1'//访微信底部弹出框,同时解决键盘弹起屏幕会上移的问题
+//    implementation 'cn.jzvd:jiaozivideoplayer:7.2.1'
+    implementation project(path: ':jiaozivideoplayer')//视频播放列表
+    implementation 'com.github.0xZhangKe:WebSocketDemo:2.2'//WebSocket
+    implementation 'com.github.xiaohaibin:XBanner:androidx_v1.0.2'//轮播图
+    implementation 'ch.ielse:imagewatcher:1.0.3'
+    implementation project(path: ':nicimageview')
+    implementation 'pub.devrel:easypermissions:1.0.1'
+//    implementation project(path: ':picture_library')
+//    implementation project(path: ':ucrop')
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.2'
+    implementation 'com.github.paradoxie:AutoVerticalTextview:0.1'
+    implementation project(path: ':giraffeplayer')
+    implementation 'com.github.kaisengao:KsgLikeView:1.0.1'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.4.0'
+    implementation 'com.github.xuexiangjys:XUpdate:1.1.6'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation(name:'qmf-ppplugin-android-3.0.9',ext:'aar')
+    implementation 'cn.jiguang.sdk:jpush:3.8.6'  // 此处以JPush 3.8.6 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.6.0'  // 此处以JCore 2.6.0 版本为例。
+    implementation 'cn.jiguang.sdk.plugin:xiaomi:3.8.6'//版本号和对应的JPush版本号相同
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.google.android:flexbox:1.0.0'
+}
+
+

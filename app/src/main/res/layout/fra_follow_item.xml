@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F4F4F4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:layout_marginTop="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="260px">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="216px"
+            android:layout_height="match_parent">
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/follow_header"
+                        android:layout_width="100px"
+                       android:layout_height="100px"
+               android:layout_marginTop="30px"
+                      android:layout_centerInParent="true"
+               android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/ic_launcher"
+                        />
+            <TextView
+                android:id="@+id/follow_name"
+                android:textSize="25px"
+                android:textColor="#333333"
+                android:layout_marginTop="20px"
+                android:text="小易欢购"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+
+                android:background="@drawable/follow_statu"
+                android:id="@+id/follow_status"
+                android:textSize="23px"
+                android:textColor="#333333"
+                android:layout_marginTop="20px"
+                android:text="已关注"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="100px"
+                android:layout_height="40px" />
+        </LinearLayout>
+        <ImageView
+            android:background="#eb5e"
+            android:layout_width="460px"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

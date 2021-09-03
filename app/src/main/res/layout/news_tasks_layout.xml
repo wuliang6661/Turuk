@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/task_dialog_bg">
+
+        <View
+            android:id="@+id/space_view"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true" />
+
+
+        <ImageView
+            android:id="@+id/delete_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/space_view"
+            android:background="@drawable/icon_delete" />
+
+
+        <TextView
+            android:id="@+id/task_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="新手任务"
+            android:textColor="#4a4f4d"
+            android:textSize="17dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_alignLeft="@+id/task_title"
+            android:layout_alignRight="@+id/task_title"
+            android:layout_below="@+id/task_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:background="#e72e2d" />
+
+        <RelativeLayout
+            android:id="@+id/sign_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/image_sign"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/sign" />
+
+            <View
+                android:id="@+id/sign_view"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/image_sign"
+                android:background="#dddddd" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/sign_view"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/image_sign"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签到"
+                    android:textColor="#4a4f4d"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/sign_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="首次签到获得10金币"
+                    android:textColor="#a4a5a5"
+                    android:textSize="11dp" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/arrow" />
+
+            <ImageView
+                android:id="@+id/sign_comple"
+                android:layout_width="47dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/complete"
+                android:visibility="gone" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/image_sign"
+                android:background="#dddddd" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/index_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/sign_layout">
+
+            <ImageView
+                android:id="@+id/image_index"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/read" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@+id/image_index"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="阅读"
+                    android:textColor="#4a4f4d"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/index_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="完成一次阅读任务获取20金币"
+                    android:textColor="#a4a5a5"
+                    android:textSize="11dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/arrow" />
+
+
+            <ImageView
+                android:id="@+id/index_comple"
+                android:layout_width="47dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/complete"
+                android:visibility="gone" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/image_index"
+                android:background="#dddddd" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/experience_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/index_layout">
+
+            <ImageView
+                android:id="@+id/image_experience"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/experience" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@+id/image_experience"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="体验"
+                    android:textColor="#4a4f4d"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/experience_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="首次购买商品获得50金币"
+                    android:textColor="#a4a5a5"
+                    android:textSize="11dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/arrow" />
+
+            <ImageView
+                android:id="@+id/experience_comple"
+                android:layout_width="47dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/complete"
+                android:visibility="gone" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/image_experience"
+                android:background="#dddddd" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/recommend_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/experience_layout">
+
+            <ImageView
+                android:id="@+id/image_recommend"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/recommend" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@+id/image_recommend"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推荐"
+                    android:textColor="#4a4f4d"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/recommend_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="招募合伙人获取100金币"
+                    android:textColor="#a4a5a5"
+                    android:textSize="11dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/arrow" />
+
+            <ImageView
+                android:id="@+id/recommend_comple"
+                android:layout_width="47dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/complete"
+                android:visibility="gone" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/image_recommend"
+                android:background="#dddddd" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recommend_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="31dp"
+            android:layout_marginTop="23dp"
+            android:text="*轻松完成任务，拿金币抵扣现金"
+            android:textColor="#e72e2d"
+            android:textSize="14dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

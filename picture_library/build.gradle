@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 60
+        versionName "6.2.5"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        repositories {
+            jcenter()
+        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    //noinspection GradleCompatible
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.concurrent:concurrent-futures:1.0.0"
+    implementation "com.squareup.okio:okio:2.5.0"
+    implementation "androidx.camera:camera-lifecycle:1.0.0-alpha10"
+    implementation "androidx.camera:camera-core:1.0.0-beta01"
+    implementation "androidx.camera:camera-camera2:1.0.0-alpha10"
+    api project(':ucrop')
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+}

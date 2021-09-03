@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/fengqiang_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在疯抢"
+            android:textColor="#e80017"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/next_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fengqiang_text"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@+id/fengqiang_text"
+            android:text="下期预告"
+            android:textColor="@color/D"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/fengqiang_text"
+            android:layout_marginTop="4dp"
+            android:background="#e60012" />
+
+        <View
+            android:id="@+id/view_line2"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_alignLeft="@+id/next_notice"
+            android:layout_below="@+id/next_notice"
+            android:layout_marginTop="4dp"
+            android:background="#e60012"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/not_fengqiang"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="暂无活动！敬请期待！"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        android:visibility="gone" />
+
+
+    <com.haoyigou.hyg.view.widget.ListViewForScrollView
+        android:id="@+id/fengqiang_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:divider="@null" />
+
+</LinearLayout>

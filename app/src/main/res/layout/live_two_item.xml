@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#F4F4F4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="#F4F4F4"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="20px"
+            android:background="#8b5"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_width="match_parent"
+            android:layout_height="184px" />
+        <RelativeLayout
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:background="#FFFFFF"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60px">
+            <TextView
+                android:id="@+id/playback_te"
+                android:layout_marginLeft="20px"
+                android:text="不可思议研究所"
+                android:textSize="27px"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

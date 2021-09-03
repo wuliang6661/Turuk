@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/banner_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:scaleType="fitXY" />
+
+
+        <TextView
+            android:id="@+id/banner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/banner_img"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="6dp"
+            android:singleLine="true"
+            android:text="跨境保税-锐丝丰盈化妆品"
+            android:textColor="@color/P"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/banner_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/banner_name"
+            android:layout_below="@+id/banner_name"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="5dp"
+            android:text="断货款，我们帮您抢到了哦"
+            android:textColor="@color/G"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/banner_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/banner_img"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="20dp"
+            android:text="¥ 58 起"
+            android:textColor="#e60012"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/banner_message"
+            android:background="#ececec" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

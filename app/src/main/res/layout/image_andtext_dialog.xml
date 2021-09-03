@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="281dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/image_dialog" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="操作成功"
+            android:textColor="#e72e2d"
+            android:textSize="15dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                android:background="@drawable/point" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="图片已保存到手机相册"
+                android:textColor="#7c7c7c"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                android:background="@drawable/point" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="分享文案和链接已复制"
+                android:textColor="#7c7c7c"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/share_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="24dp"
+            android:background="#e72e2d"
+            android:gravity="center"
+            android:text="去朋友圈分享"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/cancle"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="42dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/image_andtext_button_bg"
+            android:gravity="center"
+            android:text="关闭"
+            android:textColor="#7c7c7c"
+            android:textSize="13dp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

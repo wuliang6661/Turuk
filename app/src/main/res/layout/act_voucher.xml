@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#F4F4F4">
+    <include layout="@layout/header_layout" />
+    <LinearLayout
+        android:background="#ffffff"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="11dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+<TextView
+    android:id="@+id/no"
+    android:layout_marginLeft="11dp"
+    android:layout_gravity="center_vertical"
+    android:textColor="#000000"
+    android:text="不使用优惠券"
+    android:textSize="13.5dp"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content" />
+
+    </LinearLayout>
+<ListView
+    android:id="@+id/list"
+    android:divider="@null"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="11dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</ListView>
+</LinearLayout>

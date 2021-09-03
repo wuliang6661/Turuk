@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mian_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/remai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:text="热卖推荐"
+        android:textColor="@color/title_bg"
+        android:textSize="16dp" />
+
+
+    <com.haoyigou.hyg.view.widget.ListViewForScrollView
+        android:id="@+id/list_remai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@null" />
+    <TextView
+        android:layout_marginTop="6dp"
+        android:id="@+id/xinpin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:text="新品首发"
+        android:textColor="@color/title_bg"
+        android:textSize="16dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/see_more"
+            android:layout_width="24dp"
+            android:layout_height="65dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/more_bg"
+            android:gravity="center"
+            android:text="查\n看\n更\n多"
+            android:textColor="@color/white"
+            android:textSize="11dp" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/benyue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:text="本月活动"
+        android:textColor="@color/title_bg"
+        android:textSize="16dp" />
+
+    <com.haoyigou.hyg.view.widget.ListViewForScrollView
+        android:id="@+id/list_benyue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@null" />
+
+    <TextView
+        android:id="@+id/renqi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:text="人气推荐"
+        android:textColor="@color/title_bg"
+        android:textSize="16dp" />
+
+
+    <com.haoyigou.hyg.view.widget.ListViewForScrollView
+        android:id="@+id/list_renqi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@null" />
+
+    <TextView
+        android:id="@+id/zhuanti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:text="专题精选"
+        android:textColor="@color/title_bg"
+        android:textSize="16dp" />
+
+    <com.haoyigou.hyg.view.widget.ListViewForScrollView
+        android:id="@+id/list_zhuanti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="#f4f4f4"
+        android:dividerHeight="6dp" />
+
+
+</LinearLayout>

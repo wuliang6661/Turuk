@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+    <View
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@mipmap/c_bg"
+        android:scaleType="centerCrop"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:background="#00000000"
+        app:tabIndicatorColor="#ffffff"
+        app:tabTextAppearance="@style/CommTextAppearance"
+        app:tabTextColor="#ffffff"
+        app:tabBackground="@color/transparent"
+        app:tabRippleColor="@color/transparent"
+        app:tabSelectedTextColor="#ffffff"
+        app:tabIndicatorHeight="3dp"
+         />
+
+    <com.haoyigou.hyg.view.viewpager.ViewPagerSlide
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tablayout"
+        android:layout_marginTop="10dp"
+        android:background="#00000000"
+        android:id="@+id/viewPager"/>
+
+
+    <RelativeLayout
+        android:id="@+id/sendBtn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="45dp"
+        android:background="@mipmap/red_send">
+
+    </RelativeLayout>
+
+    <cn.dreamtobe.kpswitch.widget.KPSwitchFSPanelLinearLayout
+        android:id="@+id/panel_root"
+        style="@style/Panel"
+        android:visibility="gone">
+
+        <include layout="@layout/merge_panel_content" />
+    </cn.dreamtobe.kpswitch.widget.KPSwitchFSPanelLinearLayout>
+
+
+    <ch.ielse.view.imagewatcher.ImageWatcher
+        android:id="@+id/image_watcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"/>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#F5F5F5">
+
+    <ImageView
+        android:id="@+id/ivTitle"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="5dp"/>
+
+    <!--<com.haoyigou.hyg.view.widget.HeaderGridView-->
+        <!--android:id="@+id/grid_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#F5F5F5"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:numColumns="2"-->
+        <!--android:overScrollMode="never"/>-->
+
+    <com.haoyigou.hyg.view.FixedRecyclerView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:layout_marginTop="12dp"
+        android:numColumns="2"
+        android:overScrollMode="never">
+
+    </com.haoyigou.hyg.view.FixedRecyclerView>
+
+</LinearLayout>

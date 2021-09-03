@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F3F3F3"
+    android:gravity="center_vertical"
+    android:id="@+id/layoutMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/show_item_bg"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="206dp">
+
+            <com.haoyigou.hyg.ui.RoundImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/roundImage"
+                android:src="@drawable/itemimage"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="12dp">
+                <TextView
+                    android:id="@+id/seeNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:text="66666观看"
+                    android:background="@drawable/show_see_bg"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="10dp"/>
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@mipmap/see_num"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直播中"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:background="@mipmap/onshow"
+                android:paddingStart="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/zhubo"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="bottom">
+
+                <com.haoyigou.hyg.view.circlephoto.RoundImageView
+                    android:id="@+id/headImage"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/headpic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:text="好易购"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/place"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:text="杭州"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="2dp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRemind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/remind_bg">
+                <TextView
+                    android:id="@+id/txtRemind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提醒我"
+                    android:textColor="#ffffff"
+                    android:textSize="9sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/foucs"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="同款推荐"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="9dp"
+                android:textSize="13sp"
+                android:textColor="#7064F4"
+                android:textStyle="bold"/>
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp">
+                <com.haoyigou.hyg.ui.RoundImageView
+                    android:id="@+id/productOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pig"/>
+                <TextView
+                    android:id="@+id/productOnePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥169.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@mipmap/see_num_bg"
+                    android:gravity="center_horizontal"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp">
+                <com.haoyigou.hyg.ui.RoundImageView
+                    android:id="@+id/productTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pig"/>
+                <TextView
+                    android:id="@+id/productTwoPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥169.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@mipmap/see_num_bg"
+                    android:gravity="center_horizontal"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

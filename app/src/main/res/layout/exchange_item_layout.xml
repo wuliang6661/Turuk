@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F2F2F2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/exchange_item_bg"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/image"
+            app:shapeAppearanceOverlay="@style/roundedCornerImageStyle"
+            android:background="#D1D1D1"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="12dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addBtn"
+            android:background="@null"
+            android:src="@mipmap/add_exchange"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toStartOf="@id/addBtn"
+            android:layout_toEndOf="@id/image"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:text=""
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="#777777"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/oldPrice"
+                android:textColor="#777777"
+                android:textSize="12sp"
+                android:text=""
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nowPrice"
+                android:text="换购价  ￥12.9"
+                android:textSize="12sp"
+                android:textColor="#ED2C30"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

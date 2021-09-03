@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- 通用 -->
+
+    S
+    <dimen name="text_size_16">16dp</dimen>
+
+    <dimen name="space_14">14.0dip</dimen>
+    <dimen name="space_10">10.0dip</dimen>
+
+    <dimen name="three_grid_unit">24dp</dimen>
+    <dimen name="one_and_a_half_grid_unit">12dp</dimen>
+    <dimen name="popup_text">5dp</dimen>
+    <dimen name="weibo_header_offset">-650dp</dimen>
+
+    <!-- 自定义dialog特效对话框（结束） -->
+
+    <dimen name="textsizi">12dp</dimen>
+
+
+    <dimen name="fab_size_normal">100dp</dimen>
+
+</resources>

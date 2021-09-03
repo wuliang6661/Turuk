@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp">
+        <com.haoyigou.hyg.view.circlephoto.RoundImageView
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:id="@+id/header"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/name"
+            android:text=""
+            android:textSize="15sp"
+            android:textColor="#202020"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="5dp"/>
+        <LinearLayout
+            android:id="@+id/likeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:id="@+id/likeImage"
+                android:src="@mipmap/like_no"/>
+
+            <TextView
+                android:id="@+id/likeNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ADADAD"
+                android:textSize="13sp"
+                android:layout_marginStart="5dp"
+                android:text="0"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/content"
+        android:textColor="#202020"
+        android:textSize="15sp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:text=""/>
+
+</LinearLayout>

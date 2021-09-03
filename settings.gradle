@@ -1,0 +1,3 @@
+include ':ijkplayer'
+include ':giraffeplayer'
+include ':app', ':srdlibrary', ':lib-encrypt', ':xbanner', ':jiaozivideoplayer', ':niceimageview', 'niceimageview', 'nicimageview', ':picture_library', ':ucrop'

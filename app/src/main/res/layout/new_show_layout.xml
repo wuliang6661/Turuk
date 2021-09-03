@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/change_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/llTop"
+        layout="@layout/header_layout"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/viewBg"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewBg">
+        <LinearLayout
+            android:id="@+id/layoutBack"
+            android:layout_width="50dp"
+            android:layout_height="37dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="9dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/back_to_superior" />
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_toEndOf="@id/layoutBack"
+            app:tabIndicatorColor="#ffffff"
+            app:tabTextColor="#ffffff"
+            app:tabSelectedTextColor="#ffffff"
+            app:tabIndicatorHeight="2dp" />
+    </RelativeLayout>
+
+
+    <com.haoyigou.hyg.view.viewpager.ViewPagerSlide
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl"
+        android:background="#ffffff">
+    </com.haoyigou.hyg.view.viewpager.ViewPagerSlide>
+
+
+</RelativeLayout>

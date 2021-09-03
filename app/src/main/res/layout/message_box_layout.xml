@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/header_layout333"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/huodong_layout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/huodong_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22dp"
+                android:background="@drawable/meg_huodong_img" />
+
+            <TextView
+                android:id="@+id/huodong_num"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/huodong_img"
+                android:background="@drawable/image_oval"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/huodong_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/huodong_num"
+                android:text="精选活动"
+                android:textColor="#4b4b4b"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/huodong_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/huodong_title"
+                android:layout_below="@+id/huodong_title"
+                android:layout_marginTop="20dp"
+                android:text="跨境保税专区满299减50"
+                android:textColor="#4b4b4b"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/huodong_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="今天"
+                android:textColor="#4b4b4b"
+                android:textSize="11dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e8e8e8" />
+
+
+        <RelativeLayout
+            android:id="@+id/dingdan_layout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/dingdan_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22dp"
+                android:background="@drawable/meg_dingdan_img" />
+
+            <TextView
+                android:id="@+id/dingdan_num"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/dingdan_img"
+                android:background="@drawable/image_oval"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/dingdan_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/dingdan_num"
+                android:text="订单服务"
+                android:textColor="#4b4b4b"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/dingdan_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/dingdan_title"
+                android:layout_below="@+id/dingdan_title"
+                android:layout_marginTop="20dp"
+                android:text="跨境保税专区满299减50"
+                android:textColor="#4b4b4b"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/dingdan_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="今天"
+                android:textColor="#4b4b4b"
+                android:textSize="11dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e8e8e8" />
+
+
+        <RelativeLayout
+            android:id="@+id/tongzhi_layout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/tongzhi_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22dp"
+                android:background="@drawable/meg_tongzhi_img" />
+
+            <TextView
+                android:id="@+id/tongzhi_num"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/tongzhi_img"
+                android:background="@drawable/image_oval"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tongzhi_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/tongzhi_num"
+                android:text="消息通知"
+                android:textColor="#4b4b4b"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tongzhi_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tongzhi_title"
+                android:layout_below="@+id/tongzhi_title"
+                android:layout_marginTop="20dp"
+                android:text="跨境保税专区满299减50"
+                android:textColor="#4b4b4b"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/tongzhi_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="今天"
+                android:textColor="#4b4b4b"
+                android:textSize="11dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e8e8e8" />
+
+        <RelativeLayout
+            android:id="@+id/zichan_layout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/zichan_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22dp"
+                android:background="@drawable/meg_zichan_img" />
+
+            <TextView
+                android:id="@+id/zichan_num"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/zichan_img"
+                android:background="@drawable/image_oval"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/zichan_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/zichan_num"
+                android:text="我的资产"
+                android:textColor="#4b4b4b"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/zichan_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/zichan_title"
+                android:layout_below="@+id/zichan_title"
+                android:layout_marginTop="20dp"
+                android:text="跨境保税专区满299减50"
+                android:textColor="#4b4b4b"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/zichan_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="今天"
+                android:textColor="#4b4b4b"
+                android:textSize="11dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e8e8e8" />
+
+        <RelativeLayout
+            android:id="@+id/kefu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/kefu_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22dp"
+                android:background="@drawable/kefu" />
+
+            <TextView
+                android:id="@+id/kefu_num"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/kefu_img"
+                android:background="@drawable/image_oval"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/kefu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/kefu_num"
+                android:text="我的客服"
+                android:textColor="#4b4b4b"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/kefu_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/kefu_title"
+                android:layout_below="@+id/kefu_title"
+                android:layout_marginTop="20dp"
+                android:text="点击查看您与客服的沟通记录"
+                android:textColor="#4b4b4b"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/kefu_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="今天"
+                android:textColor="#4b4b4b"
+                android:textSize="11dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e8e8e8" />
+
+    </LinearLayout>
+
+</LinearLayout>

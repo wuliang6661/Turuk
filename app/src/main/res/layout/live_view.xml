@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rlRoot">
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#BF000000">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#00000000"
+            android:layout_marginBottom="10dp">
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp">
+                <ImageView
+                    android:id="@+id/shopBtn"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:src="@mipmap/product" />
+                <TextView
+                    android:id="@+id/productNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    android:text="0"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSend"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edittaik_bg"
+                android:layout_toEndOf="@id/rl"
+                android:layout_marginStart="9dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/inputEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:hint="跟主播聊什么?"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textColor="#ffffff"
+                    android:background="@null"/>
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:id="@+id/sendBtn"
+                android:layout_toEndOf="@id/rlSend"
+                android:background="@drawable/edittaik_bg"
+                android:text="发送"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"/>
+
+
+            <LinearLayout
+                android:id="@+id/rlZan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/likeNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="30dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:background="@drawable/like_num"
+                    android:textSize="12sp"
+                    android:textColor="#ffffff"
+                    android:text="0"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/likeBtn"
+                    android:src="@mipmap/new_zan"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:id="@+id/shareBtn"
+                android:layout_toStartOf="@id/rlZan"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="23dp"
+                android:src="@mipmap/live_share"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <cn.dreamtobe.kpswitch.widget.KPSwitchFSPanelLinearLayout
+        android:id="@+id/panel_root"
+        style="@style/Panel"
+        android:visibility="gone">
+
+        <include layout="@layout/merge_panel_content" />
+    </cn.dreamtobe.kpswitch.widget.KPSwitchFSPanelLinearLayout>
+
+    <include
+        android:id="@+id/layoutView"
+        layout="@layout/layout_live"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayout"/>
+
+    <ImageView
+        android:id="@+id/sendGift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/send_gift"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="107dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rlMain"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/rlImage"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp">
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/itemimage"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/productSingleNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:background="@mipmap/product_num_bg"
+            android:gravity="center"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textSize="13sp"
+        android:textColor="#333333"
+        android:layout_toEndOf="@id/rlImage"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:layout_marginEnd="30dp"
+        android:ellipsize="end"
+        android:text="日本平价安迪同款气垫BB全能遮瑕美白控油日本平价安迪同款气垫BB全能遮瑕美白控油日本平价安迪同款气垫BB全能遮瑕美白控油"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:layout_toEndOf="@id/rlImage"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="19dp"
+        android:textColor="#E60012"
+        android:textSize="16sp"
+        android:text="￥315.00"/>
+
+    <Button
+        android:id="@+id/buy"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:background="@drawable/foucs_bg"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="28dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="15dp"
+        android:text="去抢购"
+        android:textColor="#ffffff"
+        android:textSize="10sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D9D9D9"
+        android:layout_below="@id/rlImage"/>
+</RelativeLayout>

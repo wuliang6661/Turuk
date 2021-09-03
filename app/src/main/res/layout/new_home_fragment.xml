@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/change_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="9dp"
+        android:paddingTop="9dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/tv_show"
+            android:id="@+id/tvShowList"
+            android:layout_marginStart="12dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/select_edit"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="14dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_edit_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10dp"
+                android:background="@mipmap/blue_search" />
+
+            <TextView
+                android:id="@+id/search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/G"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/saoma"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@mipmap/white_scan" />
+
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="38dp"
+            android:layout_marginEnd="10dp">
+            <ImageView
+                android:id="@+id/xiaoxi"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/white_message" />
+            <TextView
+                android:id="@+id/messageNum"
+                android:layout_height="13dp"
+                android:layout_width="13dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="2dp"
+                android:textColor="#FFC9191D"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:background="@drawable/image_oval_white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTag"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            app:tabIndicatorColor="#EA4341"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabTextColor="#FFFFFF"
+            app:tabBackground="@color/transparent"
+            app:tabRippleColor="@color/transparent"/>
+        <RelativeLayout
+            android:id="@+id/rlDrop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:visibility="gone">
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/blue_down"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/emptyImg"
+        android:scaleType="centerCrop"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:visibility="gone"/>
+
+    <com.haoyigou.hyg.view.viewpager.ViewPagerSlide
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</LinearLayout>

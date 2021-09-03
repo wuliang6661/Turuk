@@ -1,0 +1,283 @@
+package com.haoyigou.hyg.adapter;
+
+import android.content.Context;
+import android.os.Handler;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
+import android.widget.LinearLayout;
+
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.bumptech.glide.Glide;
+import com.haoyigou.hyg.R;
+import com.haoyigou.hyg.entity.LunBoPicEntry;
+import com.haoyigou.hyg.utils.DisplayUtil;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * android banner图
+ */
+public class RollHeaderView extends FrameLayout implements ViewPager.OnPageChangeListener {
+
+    //广告轮播时间默认设为5秒，可根据后台数据动态改变
+    public static int BANNER_MITIE = 5;
+
+    private Context mContext;
+    private ViewPager mViewPager;
+    private LinearLayout mDotLl;
+    private List<LunBoPicEntry> mUrlList;
+    private List<ImageView> dotList = null;
+    private MyAdapter mAdapter = null;
+    private Handler mHandler = null;
+    private AutoRollRunnable mAutoRollRunnable = null;
+    private int prePosition = 0;
+    private HeaderViewClickListener headerViewClickListener;
+
+    public RollHeaderView(Context context) {
+        this(context, null);
+    }
+
+    public RollHeaderView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public RollHeaderView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        this.mContext = context;
+        initView();
+        initData();
+        initListener();
+    }
+
+    public void setApplicationContext(Context context) {  //防止Glide因为不在主线程报错
+        this.mContext = context;
+    }
+
+
+    //初始化view
+    private void initView() {
+        View.inflate(mContext, R.layout.view_header, this);
+        mViewPager = (ViewPager) findViewById(R.id.vp);
+        mDotLl = (LinearLayout) findViewById(R.id.ll_dot);
+        //让banner的高度是屏幕的1/3
+        ViewGroup.LayoutParams vParams = mViewPager.getLayoutParams();
+//        vParams.height = DisplayUtil.getMobileWidth(mContext) * 17 / 32;
+        vParams.height = (int) (DisplayUtil.getMobileWidth(mContext) / 1.88);
+        mViewPager.setLayoutParams(vParams);
+    }
+
+
+    private void initListener() {
+        mViewPager.addOnPageChangeListener(this);
+    }
+
+    private void initData() {
+        dotList = new ArrayList<ImageView>();
+        mAutoRollRunnable = new AutoRollRunnable();
+        mHandler = new Handler();
+        mAdapter = new MyAdapter();
+    }
+
+    /**
+     * 设置数据
+     *
+     * @param urlList
+     */
+    public void setImgUrlData(List<LunBoPicEntry> urlList) {
+        this.mUrlList = urlList;
+        if (mUrlList != null && !mUrlList.isEmpty()) {
+            //清空数据
+            dotList.clear();
+            mDotLl.removeAllViews();
+            ImageView dotIv;
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+            for (int i = 0; i < mUrlList.size(); i++) {
+                dotIv = new ImageView(mContext);
+                if (i == 0) {
+                    dotIv.setBackgroundResource(R.drawable.lunbo_normal);
+                } else {
+                    dotIv.setBackgroundResource(R.drawable.lunbo_press);
+                }
+                //设置点的间距
+                params.setMargins(0, 0, DisplayUtil.dip2px(mContext, 5), 0);
+                dotIv.setLayoutParams(params);
+                //添加点到view上
+                mDotLl.addView(dotIv);
+                //添加到集合中, 以便控制其切换
+                dotList.add(dotIv);
+            }
+        }
+        mAdapter = new MyAdapter();
+        mViewPager.setAdapter(mAdapter);
+        //设置viewpager初始位置, +10000就够了
+        mViewPager.setCurrentItem(urlList.size() + 10000);
+        startRoll();
+    }
+
+
+    /***
+     * 设置轮播时间间隔
+     */
+    public void setCarouselTime(int time) {
+        this.BANNER_MITIE = time;
+    }
+
+
+    /**
+     * 设置点击事件
+     *
+     * @param headerViewClickListener
+     */
+    public void setOnHeaderViewClickListener(HeaderViewClickListener headerViewClickListener) {
+        this.headerViewClickListener = headerViewClickListener;
+    }
+
+
+    //开始轮播
+    public void startRoll() {
+        mAutoRollRunnable.start();
+    }
+
+    // 停止轮播
+    public void stopRoll() {
+        mAutoRollRunnable.stop();
+    }
+
+    private class AutoRollRunnable implements Runnable {
+        //是否在轮播的标志
+        boolean isRunning = false;
+
+        public void start() {
+            if (!isRunning) {
+                isRunning = true;
+                mHandler.removeCallbacks(this);
+                mHandler.postDelayed(this, RollHeaderView.BANNER_MITIE * 1000);
+            }
+        }
+
+        public void stop() {
+            if (isRunning) {
+                mHandler.removeCallbacks(this);
+                isRunning = false;
+            }
+        }
+
+        @Override
+        public void run() {
+            if (isRunning) {
+                mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);
+                mHandler.postDelayed(this, RollHeaderView.BANNER_MITIE * 1000);
+            }
+        }
+    }
+
+    public interface HeaderViewClickListener {
+        void HeaderViewClick(int position);
+    }
+
+    private class MyAdapter extends PagerAdapter {
+
+        //为了复用
+        private List<ImageView> imgCache = new ArrayList<ImageView>();
+
+        @Override
+        public int getCount() {
+            //无限滑动
+            return Integer.MAX_VALUE;
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object o) {
+            return view == o;
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, final int position) {
+            ImageView iv;
+            //获取ImageView对象
+            if (imgCache.size() > 0) {
+                iv = imgCache.remove(0);
+            } else {
+                iv = new ImageView(mContext);
+            }
+            iv.setScaleType(ScaleType.FIT_XY);
+            iv.setOnTouchListener(new OnTouchListener() {
+                private int downX = 0;
+                private long downTime = 0;
+
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    switch (event.getAction()) {
+                        case MotionEvent.ACTION_DOWN:
+                            mAutoRollRunnable.stop();
+                            //获取按下的x坐标
+                            downX = (int) v.getX();
+                            downTime = System.currentTimeMillis();
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            mAutoRollRunnable.start();
+                            int moveX = (int) v.getX();
+                            long moveTime = System.currentTimeMillis();
+                            if (downX == moveX && (moveTime - downTime < 500)) {//点击的条件
+                                //轮播图回调点击事件
+                                headerViewClickListener.HeaderViewClick(position % mUrlList.size());
+                            }
+                            break;
+                        case MotionEvent.ACTION_CANCEL:
+                            mAutoRollRunnable.start();
+                            break;
+                    }
+                    return true;
+                }
+            });
+            //加载图片
+            if (mUrlList.size() != 0)
+                Glide.with(mContext).load(mUrlList.get(position % mUrlList.size()).getPictureroot()).into(iv);
+            container.addView(iv);
+
+            return iv;
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            if (object != null && object instanceof ImageView) {
+                ImageView iv = (ImageView) object;
+                container.removeView(iv);
+                imgCache.add(iv);
+            }
+        }
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        dotList.get(prePosition).setBackgroundResource(R.drawable.lunbo_press);
+        dotList.get(position % dotList.size()).setBackgroundResource(R.drawable.lunbo_normal);
+        prePosition = position % dotList.size();
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int arg0) {
+
+    }
+
+    @Override
+    public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+    }
+
+
+    //停止轮播
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        stopRoll();
+    }
+}

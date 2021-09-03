@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/item_view"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="135dp"
+            android:layout_height="69dp"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/coupon_bg">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="17dp"
+                android:paddingBottom="2dp"
+                android:text="￥"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/label"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/label"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textSize="23dp" />
+
+
+            <TextView
+                android:id="@+id/coupon_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/label"
+                android:layout_below="@+id/label"
+                android:layout_marginTop="5dp"
+                android:text="满150元可用"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+
+            <ImageView
+                android:id="@+id/coupon_get"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/coupon_get"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
